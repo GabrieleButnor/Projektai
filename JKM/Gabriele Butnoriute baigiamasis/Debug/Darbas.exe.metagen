@@ -1,0 +1,283 @@
+  Darbas.Forma_AtrankosFiltras.resources - Embedded, ContainedInManifestFile, 
+  Darbas.Forma_Automobiliai.resources - Embedded, ContainedInManifestFile, 
+  Darbas.Forma_Apie.resources - Embedded, ContainedInManifestFile, 
+  Darbas.Forma_IstrintiAutomobili.resources - Embedded, ContainedInManifestFile, 
+  Darbas.Forma_NaujaKelione.resources - Embedded, ContainedInManifestFile, 
+  Darbas.Forma_KelioniuLentele.resources - Embedded, ContainedInManifestFile, 
+  Darbas.Forma_Pagrindine.resources - Embedded, ContainedInManifestFile, 
+  Darbas.Forma_Parinktys.resources - Embedded, ContainedInManifestFile, 
+  Darbas.Forma_AutomobilisKelionei.resources - Embedded, ContainedInManifestFile, 
+  Darbas.Forma_PridetiAutomobili.resources - Embedded, ContainedInManifestFile, 
+  Darbas.Forma_Registracija.resources - Embedded, ContainedInManifestFile, 
+  Darbas.Forma_KelionesSanaudos.resources - Embedded, ContainedInManifestFile, 
+  Darbas.Forma_Ataskaita.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly Darbas, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class Darbas.KuroTipas: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    System.String Pavad 'get ' : 
+  Methods:
+    get_Pavad(): PrivateScope, Public, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Darbas.Automobilis: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, System.String, Darbas.KuroTipas, Double, Double, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    Double Tarsos_Koeficentas 'get ' : 
+    Double Sanaudu_Norma_Ziema 'get ' : 
+    Double Sanaudu_Norma_Vasara 'get ' : 
+    System.String KuroRusiesPavad 'get ' : 
+    Darbas.KuroTipas KuroRusis 'get ' : 
+    System.String Marke 'get ' : 
+    System.String ValNr 'get ' : 
+  Methods:
+    get_ValNr(): PrivateScope, Public, HideBySig, SpecialName
+    get_Marke(): PrivateScope, Public, HideBySig, SpecialName
+    get_KuroRusis(): PrivateScope, Public, HideBySig, SpecialName
+    get_KuroRusiesPavad(): PrivateScope, Public, HideBySig, SpecialName
+    get_Sanaudu_Norma_Vasara(): PrivateScope, Public, HideBySig, SpecialName
+    get_Sanaudu_Norma_Ziema(): PrivateScope, Public, HideBySig, SpecialName
+    get_Tarsos_Koeficentas(): PrivateScope, Public, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Darbas.KuroTipai: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Sukurti(String): PrivateScope, Public, HideBySig
+    Pasalinti(KuroTipas&): PrivateScope, Public, HideBySig
+    Rasti_PagalPavadinima(String): PrivateScope, Public, HideBySig
+    Rasti_PagalIndeksa(Int32): PrivateScope, Public, HideBySig
+    ElementuKiekis(): PrivateScope, Public, HideBySig
+    Nerastas(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Darbas.Automobiliai: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Darbas.KuroTipai): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Sukurti(String, String, KuroTipas, Double, Double, Double): PrivateScope, Public, HideBySig
+    Sukurti(String, String, String, Double, Double, Double): PrivateScope, Public, HideBySig
+    Pasalinti(Automobilis): PrivateScope, Public, HideBySig
+    Rasti_PagalValstybiniNumeri(String): PrivateScope, Public, HideBySig
+    Rasti_PagalIndeksa(Int32): PrivateScope, Public, HideBySig
+    Duok_Sarasa(): PrivateScope, Public, HideBySig
+    ElementuKiekis(): PrivateScope, Public, HideBySig
+    Nerastas(): PrivateScope, Public, HideBySig
+    Isvalyti_AktyvuAutomobili(): PrivateScope, Public, HideBySig
+    Nurodyti_AktyvuAutomobiliPagalValNr(String): PrivateScope, Public, HideBySig
+    AktyvusAutomobilis(): PrivateScope, Public, HideBySig
+    Valyti(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Darbas.Salis: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Kodas(): PrivateScope, Public, HideBySig
+    Pavad(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Darbas.Kelione: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Darbas.Automobilis ByRef, System.ValueType, Darbas.Salis ByRef, System.String, Darbas.Salis ByRef, System.String, Double, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    Double Kuro_Sanaudos 'get ' : 
+    Double Atstumas 'get ' : 
+    System.String I_Miesta 'get ' : 
+    System.String I_Salies_Kodas 'get ' : 
+    System.String Is_Miesto 'get ' : 
+    System.String Is_Salies_Kodas 'get ' : 
+    System.ValueType Data 'get ' DateTime IsBoxed : 
+    System.String ValNr 'get ' : 
+  Methods:
+    get_ValNr(): PrivateScope, Public, HideBySig, SpecialName
+    Masina(): PrivateScope, Public, HideBySig
+    Nurodyti_Masina(Automobilis&): PrivateScope, Public, HideBySig
+    get_Data(): PrivateScope, Public, HideBySig, SpecialName
+    Data_Tekstu(): PrivateScope, Public, HideBySig
+    Nurodyti_Data(ValueType DateTime IsBoxed): PrivateScope, Public, HideBySig
+    Nurodyti_Data_Tekstu(String): PrivateScope, Public, HideBySig
+    get_Is_Salies_Kodas(): PrivateScope, Public, HideBySig, SpecialName
+    Is_Salies(): PrivateScope, Public, HideBySig
+    Nurodyti_Sali_Is(Salis&): PrivateScope, Public, HideBySig
+    get_Is_Miesto(): PrivateScope, Public, HideBySig, SpecialName
+    Nurodyti_Miesta_Is(String): PrivateScope, Public, HideBySig
+    get_I_Salies_Kodas(): PrivateScope, Public, HideBySig, SpecialName
+    I_Sali(): PrivateScope, Public, HideBySig
+    Nurodyti_Sali_I(Salis&): PrivateScope, Public, HideBySig
+    get_I_Miesta(): PrivateScope, Public, HideBySig, SpecialName
+    Nurodyti_Miesta_I(String): PrivateScope, Public, HideBySig
+    get_Atstumas(): PrivateScope, Public, HideBySig, SpecialName
+    Nurodyti_Atstuma(Double): PrivateScope, Public, HideBySig
+    get_Kuro_Sanaudos(): PrivateScope, Public, HideBySig, SpecialName
+    SuskaiciuokSanaudas(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Darbas.Salys: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Sukurti(String, String): PrivateScope, Public, HideBySig
+    Pasalinti(Salis&): PrivateScope, Public, HideBySig
+    Rasti_PagalKoda(String): PrivateScope, Public, HideBySig
+    Rasti_PagalIndeksa(Int32): PrivateScope, Public, HideBySig
+    ElementuKiekis(): PrivateScope, Public, HideBySig
+    Nerasta(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Darbas.Keliones: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Darbas.Automobiliai, Darbas.Salys): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Sukurti(Automobilis, DateTime, Salis, String, Salis, String, Double, Double): PrivateScope, Public, HideBySig
+    Sukurti(Automobilis, String, Salis, String, Salis, String, Double, Double): PrivateScope, Public, HideBySig
+    Sukurti(String, String, String, String, String, String, Double, Double): PrivateScope, Public, HideBySig
+    Pasalinti(Kelione): PrivateScope, Public, HideBySig
+    Rasti_PagalIndeksa(Int32): PrivateScope, Public, HideBySig
+    Duok_Sarasa(): PrivateScope, Public, HideBySig
+    ElementuKiekis(): PrivateScope, Public, HideBySig
+    Valyti(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Darbas.AtaskaitosAtranka: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Darbas.Automobilis ByRef, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    Double Tarsos_Koeficentas 'get ' : 
+    Double Visos_Kuro_Sanaudos 'get ' : 
+    System.String KuroRusis 'get ' : 
+    System.String ValstybinisNumeris 'get ' : 
+  Methods:
+    Masina(): PrivateScope, Public, HideBySig
+    get_ValstybinisNumeris(): PrivateScope, Public, HideBySig, SpecialName
+    get_KuroRusis(): PrivateScope, Public, HideBySig, SpecialName
+    get_Visos_Kuro_Sanaudos(): PrivateScope, Public, HideBySig, SpecialName
+    Nurodyti_Visas_Kuro_Sanaudas(Double): PrivateScope, Public, HideBySig
+    get_Tarsos_Koeficentas(): PrivateScope, Public, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Darbas.Ataskaita: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Darbas.Automobiliai, Darbas.Keliones): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Sukurti(String, Double): PrivateScope, Public, HideBySig
+    Sukurti(Automobilis, Double): PrivateScope, Public, HideBySig
+    Rasti_PagalAutomobili(Automobilis): PrivateScope, Public, HideBySig
+    Atrinkti(ValueType DateTime IsBoxed, ValueType DateTime IsBoxed): PrivateScope, Public, HideBySig
+    Rasti_PagalIndeksa(Int32): PrivateScope, Public, HideBySig
+    Duok_Sarasa(): PrivateScope, Public, HideBySig
+    ElementuKiekis(): PrivateScope, Public, HideBySig
+    Valyti(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Darbas.Duomenys: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    VisosSalys(): PrivateScope, Public, HideBySig
+    VisiKuroTipai(): PrivateScope, Public, HideBySig
+    VisiAutomobiliai(): PrivateScope, Public, HideBySig
+    VisosKeliones(): PrivateScope, Public, HideBySig
+    VisaAtaskaita(): PrivateScope, Public, HideBySig
+    Nuskaityti_KuroTipus(String&): PrivateScope, Public, HideBySig
+    Nuskaityti_Salis(String&): PrivateScope, Public, HideBySig
+    Nuskaityti_Automobilius(String): PrivateScope, Public, HideBySig
+    Nuskaityti_Keliones(String&): PrivateScope, Public, HideBySig
+    Nuskaityti_Ataskaita(String&): PrivateScope, Public, HideBySig
+    Issaugok_KuroTipus(String&): PrivateScope, Public, HideBySig
+    Issaugok_Salis(String&): PrivateScope, Public, HideBySig
+    Issaugok_Automobilius(String&): PrivateScope, Public, HideBySig
+    Issaugok_Keliones(String&): PrivateScope, Public, HideBySig
+    Issaugok_Ataskaita(String&): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Darbas.Forma_Ataskaita: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(Darbas.Duomenys): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Darbas.Forma_AtrankosFiltras: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(Darbas.Duomenys): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Darbas.Forma_PridetiAutomobili: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(Darbas.Duomenys): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Darbas.Forma_IstrintiAutomobili: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(Darbas.Duomenys): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Darbas.Forma_Automobiliai: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(Darbas.Duomenys): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Darbas.Forma_Apie: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Darbas.Forma_KelionesSanaudos: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Darbas.Forma_NaujaKelione: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(Darbas.Duomenys): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Darbas.Forma_KelioniuLentele: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(Darbas.Duomenys): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Darbas.Vartotojas: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, System.String, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Vardas(): PrivateScope, Public, HideBySig
+    ArAtitinkaSlaptazodis(String): PrivateScope, Public, HideBySig
+    ArAdministratorius(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Darbas.Vartotojai: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Sukurti(String, String, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Pasalinti(Vartotojas&): PrivateScope, Public, HideBySig
+    Rasti_pagalVarda(String): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Darbas.Prisijungimas: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Sukurk_Vartotojus(): PrivateScope, Public, HideBySig
+    Prisijungti(String, String, String&): PrivateScope, Public, HideBySig
+    Atsijungti(): PrivateScope, Public, HideBySig
+    ArPrisijunges(): PrivateScope, Public, HideBySig
+    PrisijungesKaip(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Darbas.Forma_Parinktys: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(Darbas.Prisijungimas, Darbas.Duomenys): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Darbas.Forma_AutomobilisKelionei: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(Darbas.Duomenys): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Darbas.Forma_Registracija: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(Darbas.Prisijungimas): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Darbas.Forma_Pagrindine: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

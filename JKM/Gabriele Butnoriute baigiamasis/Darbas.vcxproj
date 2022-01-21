@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CBE07DCD-6E04-4C4B-A6D6-1A12AC6D7F80}</ProjectGuid>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>Darbas</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies />
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Ataskaita.cpp" />
+    <ClCompile Include="AtaskaitosAtranka.cpp" />
+    <ClCompile Include="Automobiliai.cpp" />
+    <ClCompile Include="Automobilis.cpp" />
+    <ClCompile Include="Duomenys.cpp" />
+    <ClCompile Include="Forma_AtrankosFiltras.cpp" />
+    <ClCompile Include="Forma_Automobiliai.cpp" />
+    <ClCompile Include="Forma_Apie.cpp" />
+    <ClCompile Include="Forma_IstrintiAutomobili.cpp" />
+    <ClCompile Include="Forma_NaujaKelione.cpp" />
+    <ClCompile Include="Forma_KelioniuLentele.cpp" />
+    <ClCompile Include="Forma_Pagrindine.cpp" />
+    <ClCompile Include="Forma_Parinktys.cpp" />
+    <ClCompile Include="Forma_AutomobilisKelionei.cpp" />
+    <ClCompile Include="Forma_PridetiAutomobili.cpp" />
+    <ClCompile Include="Forma_Registracija.cpp" />
+    <ClCompile Include="Forma_KelionesSanaudos.cpp" />
+    <ClCompile Include="Forma_Ataskaita.cpp" />
+    <ClCompile Include="Kelione.cpp" />
+    <ClCompile Include="Keliones.cpp" />
+    <ClCompile Include="KuroTipai.cpp" />
+    <ClCompile Include="KuroTipas.cpp" />
+    <ClCompile Include="Prisijungimas.cpp" />
+    <ClCompile Include="Salis.cpp" />
+    <ClCompile Include="Salys.cpp" />
+    <ClCompile Include="Vartotojai.cpp" />
+    <ClCompile Include="Vartotojas.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Ataskaita.h" />
+    <ClInclude Include="AtaskaitosAtranka.h" />
+    <ClInclude Include="Automobiliai.h" />
+    <ClInclude Include="Automobilis.h" />
+    <ClInclude Include="Duomenys.h" />
+    <ClInclude Include="Forma_AtrankosFiltras.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Forma_Automobiliai.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Forma_Apie.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Forma_IstrintiAutomobili.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Forma_NaujaKelione.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Forma_KelioniuLentele.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Forma_Pagrindine.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Forma_Parinktys.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Forma_AutomobilisKelionei.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Forma_PridetiAutomobili.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Forma_Registracija.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Forma_KelionesSanaudos.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Forma_Ataskaita.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Kelione.h" />
+    <ClInclude Include="Keliones.h" />
+    <ClInclude Include="KuroTipai.h" />
+    <ClInclude Include="KuroTipas.h" />
+    <ClInclude Include="Prisijungimas.h" />
+    <ClInclude Include="Salis.h" />
+    <ClInclude Include="Salys.h" />
+    <ClInclude Include="Vartotojai.h" />
+    <ClInclude Include="Vartotojas.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forma_AtrankosFiltras.resx">
+      <DependentUpon>Forma_AtrankosFiltras.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forma_Automobiliai.resx">
+      <DependentUpon>Forma_Automobiliai.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forma_Apie.resx">
+      <DependentUpon>Forma_Apie.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forma_IstrintiAutomobili.resx">
+      <DependentUpon>Forma_IstrintiAutomobili.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forma_NaujaKelione.resx">
+      <DependentUpon>Forma_NaujaKelione.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forma_KelioniuLentele.resx">
+      <DependentUpon>Forma_KelioniuLentele.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forma_Pagrindine.resx">
+      <DependentUpon>Forma_Pagrindine.h</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forma_Parinktys.resx">
+      <DependentUpon>Forma_Parinktys.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forma_AutomobilisKelionei.resx">
+      <DependentUpon>Forma_AutomobilisKelionei.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forma_PridetiAutomobili.resx">
+      <DependentUpon>Forma_PridetiAutomobili.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forma_Registracija.resx">
+      <DependentUpon>Forma_Registracija.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forma_KelionesSanaudos.resx">
+      <DependentUpon>Forma_KelionesSanaudos.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forma_Ataskaita.resx">
+      <DependentUpon>Forma_Ataskaita.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,99 @@
+AE	Jungtiniai Arabø Emyratai
+AF	Afganistanas
+AI	Angilija
+AL	Albanija
+AM	Armënija
+AR	Argentina
+AT	Austrija
+AU	Australija
+AZ	Azerbaidþanas
+BA	Bosnija ir Hercegovina
+BD	Bangladeðas
+BE	Belgija
+BG	Bulgarija
+BR	Brazilija
+BY	Baltarusija
+CA	Kanada
+CD	Kongo Demokratinë Respublika
+CF	Centrinës Afrikos Respublika
+CG	Kongas
+CH	Ðveicarija
+CL	Èilë
+CM	Kamerûnas
+CN	Kinija
+CO	Kolumbija
+CP	Klipertonas
+CR	Kosta Rika
+CU	Kuba
+CY	Kipras
+CZ	Èekija
+DE	Vokietija
+DK	Danija
+DM	Dominika
+DO	Dominikos Respublika
+EE	Estija
+EG	Egiptas
+EL	Graikija
+ES	Ispanija
+ET	Etiopija
+FI	Suomija
+FR	Prancûzija
+GE	Gruzija
+GL	Grenlandija
+HK	Honkongas
+HM	Herdas ir Makdonaldas
+HN	Hondûras
+HR	Kroatija
+HU	Vengrija
+ID	Indonezija
+IE	Airija
+IL	Izraelis
+IN	Indija
+IS	Islandija
+IT	Italija
+JP	Japonija
+KR	Pietø Korëja
+LI	Lichtenðteinas
+LK	Ðri Lanka
+LT	Lietuva
+LU	Liuksemburgas
+LV	Latvija
+MA	Marokas
+MC	Monakas
+MD	Moldova
+ME	Juodkalnija
+MG	Madagaskaras
+MT	Malta
+MV	Maldyvai
+MX	Meksika
+NL	Nyderlandai
+NO	Norvegija
+NP	Nepalas
+NZ	Naujoji Zelandija
+PG	Papua Naujoji Gvinëja
+PH	Filipinai
+PK	Pakistanas
+PL	Lenkija
+PR	Puerto Rikas
+PT	Portugalija
+PY	Paragvajus
+RO	Rumunija
+RS	Serbija
+RU	Rusija
+SA	Saudo Arabija
+SE	Ðvedija
+SG	Singapûras
+SI	Slovënija
+SK	Slovakija
+SY	Sirija
+TH	Tailandas
+TN	Tunisas
+TR	Turkija
+UA	Ukraina
+UK	Jungtinë Karalystë
+US	Jungtinës Valstijos
+UY	Urugvajus
+VA	Ðventasis Sostas / Vatikanas
+VE	Venesuela
+
+

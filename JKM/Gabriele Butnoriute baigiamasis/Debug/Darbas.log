@@ -1,0 +1,54 @@
+﻿Build started 2018-04-27 08:23:03.
+     1>Project "C:\Users\Gabriele\Desktop\Darbas_VS_2012\Darbas.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.0\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib Ataskaita.cpp Duomenys.cpp Forma_Ataskaita.cpp Forma_AtrankosFiltras.cpp Forma_Automobiliai.cpp Forma_AutomobilisKelionei.cpp Forma_IstrintiAutomobili.cpp Forma_KelionesSanaudos.cpp Forma_KelioniuLentele.cpp Forma_NaujaKelione.cpp Forma_Pagrindine.cpp Forma_Parinktys.cpp Forma_PridetiAutomobili.cpp Forma_Registracija.cpp
+         Ataskaita.cpp
+         Duomenys.cpp
+         Forma_Ataskaita.cpp
+         Forma_AtrankosFiltras.cpp
+         Forma_Automobiliai.cpp
+         Forma_AutomobilisKelionei.cpp
+         Forma_IstrintiAutomobili.cpp
+         Forma_KelionesSanaudos.cpp
+         Forma_KelioniuLentele.cpp
+         Forma_NaujaKelione.cpp
+         Forma_Pagrindine.cpp
+         Forma_Parinktys.cpp
+         Forma_PridetiAutomobili.cpp
+         Forma_Registracija.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Gabriele\Desktop\Darbas_VS_2012\Debug\Darbas.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:Debug\Darbas.Forma_AtrankosFiltras.resources /ASSEMBLYRESOURCE:Debug\Darbas.Forma_Automobiliai.resources /ASSEMBLYRESOURCE:Debug\Darbas.Forma_Apie.resources /ASSEMBLYRESOURCE:Debug\Darbas.Forma_IstrintiAutomobili.resources /ASSEMBLYRESOURCE:Debug\Darbas.Forma_NaujaKelione.resources /ASSEMBLYRESOURCE:Debug\Darbas.Forma_KelioniuLentele.resources /ASSEMBLYRESOURCE:Debug\Darbas.Forma_Pagrindine.resources /ASSEMBLYRESOURCE:Debug\Darbas.Forma_Parinktys.resources /ASSEMBLYRESOURCE:Debug\Darbas.Forma_AutomobilisKelionei.resources /ASSEMBLYRESOURCE:Debug\Darbas.Forma_PridetiAutomobili.resources /ASSEMBLYRESOURCE:Debug\Darbas.Forma_Registracija.resources /ASSEMBLYRESOURCE:Debug\Darbas.Forma_KelionesSanaudos.resources /ASSEMBLYRESOURCE:Debug\Darbas.Forma_Ataskaita.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Gabriele\Desktop\Darbas_VS_2012\Debug\Darbas.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\Ataskaita.obj
+         Debug\AtaskaitosAtranka.obj
+         Debug\Automobiliai.obj
+         Debug\Automobilis.obj
+         Debug\Duomenys.obj
+         Debug\Forma_AtrankosFiltras.obj
+         Debug\Forma_Automobiliai.obj
+         Debug\Forma_Apie.obj
+         Debug\Forma_IstrintiAutomobili.obj
+         Debug\Forma_NaujaKelione.obj
+         Debug\Forma_KelioniuLentele.obj
+         Debug\Forma_Pagrindine.obj
+         Debug\Forma_Parinktys.obj
+         Debug\Forma_AutomobilisKelionei.obj
+         Debug\Forma_PridetiAutomobili.obj
+         Debug\Forma_Registracija.obj
+         Debug\Forma_KelionesSanaudos.obj
+         Debug\Forma_Ataskaita.obj
+         Debug\Kelione.obj
+         Debug\Keliones.obj
+         Debug\KuroTipai.obj
+         Debug\KuroTipas.obj
+         Debug\Prisijungimas.obj
+         Debug\Salis.obj
+         Debug\Salys.obj
+         Debug\Vartotojai.obj
+         Debug\Vartotojas.obj
+         "Debug\.NETFramework,Version=v4.5.AssemblyAttributes.obj"
+         Darbas.vcxproj -> C:\Users\Gabriele\Desktop\Darbas_VS_2012\Debug\Darbas.exe
+     1>Done Building Project "C:\Users\Gabriele\Desktop\Darbas_VS_2012\Darbas.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:14.88

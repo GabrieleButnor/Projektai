@@ -1,0 +1,247 @@
+AD	Andora
+AE	Jungtiniai Arabø Emyratai
+AF	Afganistanas
+AG	Antigva ir Barbuda
+AI	Angilija
+AL	Albanija
+AM	Armënija
+AO	Angola
+AQ	Antarktis
+AR	Argentina
+AS	Amerikos Samoa
+AT	Austrija
+AU	Australija
+AW	Aruba
+AX	Alandai
+AZ	Azerbaidþanas
+BA	Bosnija ir Hercegovina
+BB	Barbadosas
+BD	Bangladeðas
+BE	Belgija
+BF	Burkina Fasas
+BG	Bulgarija
+BH	Bahreinas
+BI	Burundis
+BJ	Beninas
+BL	Sen Bartelemi
+BM	Bermuda
+BN	Brunëjus
+BO	Bolivija
+BR	Brazilija
+BS	Bahamos
+BT	Butanas
+BV	Buvë
+BW	Botsvana
+BY	Baltarusija
+BZ	Belizas
+CA	Kanada
+CC	Kokosø (Kilingo) Salos
+CD	Kongo Demokratinë Respublika
+CF	Centrinës Afrikos Respublika
+CG	Kongas
+CH	Ðveicarija
+CI	Dramblio Kaulo Krantas
+CK	Kuko Salos
+CL	Èilë
+CM	Kamerûnas
+CN	Kinija
+CO	Kolumbija
+CP	Klipertonas
+CR	Kosta Rika
+CU	Kuba
+CV	Þaliasis Kyðulys
+CX	Kalëdø Sala
+CW	Kiurasao
+CY	Kipras
+CZ	Èekija
+DE	Vokietija
+DJ	Dþibutis
+DK	Danija
+DM	Dominika
+DO	Dominikos Respublika
+DZ	Alþyras
+EC	Ekvadoras
+EE	Estija
+EG	Egiptas
+EH	Vakarø Sachara
+EL	Graikija
+ER	Eritrëja
+ES	Ispanija
+ET	Etiopija
+FI	Suomija
+FJ	Fidþis
+FK	Folklandas
+FM	Mikronezija
+FO	Farerai
+FR	Prancûzija
+GA	Gabonas
+GD	Grenada
+GE	Gruzija
+GF	Prancûzijos Gviana
+GG	Gernsis
+GH	Gana
+GI	Gibraltaras
+GL	Grenlandija
+GM	Gambija
+GN	Gvinëja
+GP	Gvadelupa
+GQ	Pusiaujo Gvinëja
+GS	Pietø Dþordþija ir Pietø Sandvièas
+GT	Gvatemala
+GU	Guamas
+GW	Bisau Gvinëja
+GY	Gajana
+HK	Honkongas
+HM	Herdas ir Makdonaldas
+HN	Hondûras
+HR	Kroatija
+HT	Haitis
+HU	Vengrija
+ID	Indonezija
+IE	Airija
+IL	Izraelis
+IM	Menas
+IN	Indija
+IO	Indijos Vandenyno Britø Sritis
+IQ	Irakas
+IR	Iranas
+IS	Islandija
+IT	Italija
+JE	Dþersis
+JM	Jamaika
+JO	Jordanija
+JP	Japonija
+KE	Kenija
+KG	Kirgizija
+KH	Kambodþa
+KI	Kiribatis
+KM	Komorai
+KN	Sent Kitsas ir Nevis
+KP	Ðiaurës Korëja
+KR	Pietø Korëja
+KW	Kuveitas
+KY	Kaimanai
+KZ	Kazachstanas
+LA	Laosas
+LB	Libanas
+LC	Sent Lusija
+LI	Lichtenðteinas
+LK	Ðri Lanka
+LR	Liberija
+LS	Lesotas
+LT	Lietuva
+LU	Liuksemburgas
+LV	Latvija
+LY	Libija
+MA	Marokas
+MC	Monakas
+MD	Moldova
+ME	Juodkalnija
+MF	Sen Martenas
+MG	Madagaskaras
+MH	Marðalo Salos
+ML	Malis
+MM	Mianmaras / Birma
+MN	Mongolija
+MO	Makao
+MP	Marianos Ðiaurinës Salos
+MQ	Martinika
+MR	Mauritanija
+MS	Montseratas
+MT	Malta
+MU	Mauricijus
+MV	Maldyvai
+MW	Malavis
+MX	Meksika
+MY	Malaizija
+MZ	Mozambikas
+NA	Namibija
+NC	Naujoji Kaledonija
+NE	Nigeris
+NF	Norfolko Sala
+NG	Nigerija
+NI	Nikaragva
+NL	Nyderlandai
+NO	Norvegija
+NP	Nepalas
+NR	Nauru
+NU	Niujë
+NZ	Naujoji Zelandija
+OM	Omanas
+PA	Panama
+PE	Peru
+PF	Prancûzijos Polinezija
+PG	Papua Naujoji Gvinëja
+PH	Filipinai
+PK	Pakistanas
+PL	Lenkija
+PM	Sen Pjeras ir Mikelonas
+PN	Pitkernas
+PR	Puerto Rikas
+PT	Portugalija
+PW	Palau
+PY	Paragvajus
+QA	Kataras
+RE	Reunjonas
+RO	Rumunija
+RS	Serbija
+RU	Rusija
+RW	Ruanda
+SA	Saudo Arabija
+SB	Saliamono Salos
+SC	Seiðeliai
+SD	Sudanas
+SE	Ðvedija
+SG	Singapûras
+SH	Ðv. Elenos, Dangun Þengimo ir Tristano da Kunjos Salos
+SI	Slovënija
+SJ	Svalbardas ir Janas Majenas
+SK	Slovakija
+SL	Siera Leonë
+SM	San Marinas
+SN	Senegalas
+SO	Somalis
+SR	Surinamas
+SS	Pietø Sudanas
+ST	San Tomë ir Prinsipë 
+SV	Salvadoras
+SX	Sint Martenas
+SY	Sirija
+SZ	Svazilandas
+TC	Terksas ir Kaikosas
+TD	Èadas
+TF	Prancûzijos Pietø ir Antarkties Sritys
+TG	Togas
+TH	Tailandas
+TJ	Tadþikistanas
+TK	Tokelau
+TL	Rytø Timoras
+TM	Turkmënistanas
+TN	Tunisas
+TO	Tonga
+TR	Turkija
+TT	Trinidadas ir Tobagas
+TV	Tuvalu
+TW	Taivanas
+TZ	Tanzanija
+UA	Ukraina
+UG	Uganda
+UK	Jungtinë Karalystë
+UM	Maþosios Tolimosios Salos
+US	Jungtinës Valstijos
+UY	Urugvajus
+UZ	Uzbekistanas
+VA	Ðventasis Sostas / Vatikanas
+VC	Sent Vinsentas ir Grenadinai
+VE	Venesuela
+VG	Mergeliø Salos (Didþioji Britanija)
+VI	Mergeliø Salos (JAV)
+VN	Vietnamas
+VU	Vanuatu
+WF	Volisas ir Futûna
+WS	Samoa
+YE	Jemenas
+YT	Majotas
+ZA	Pietø Afrika
+ZM	Zambija
+ZW	Zimbabvë

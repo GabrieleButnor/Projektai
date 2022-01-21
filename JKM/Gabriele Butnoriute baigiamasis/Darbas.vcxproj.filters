@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Automobiliai.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Ataskaita.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AtaskaitosAtranka.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Automobilis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Duomenys.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Forma_AtrankosFiltras.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Forma_Automobiliai.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Forma_Apie.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Forma_IstrintiAutomobili.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Forma_NaujaKelione.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Forma_KelioniuLentele.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Forma_Pagrindine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Forma_Parinktys.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Forma_AutomobilisKelionei.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Forma_PridetiAutomobili.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Forma_Registracija.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Forma_KelionesSanaudos.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Forma_Ataskaita.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Kelione.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Keliones.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="KuroTipai.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="KuroTipas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Prisijungimas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Salis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Salys.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Vartotojai.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Vartotojas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Automobiliai.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Ataskaita.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AtaskaitosAtranka.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Automobilis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Duomenys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Forma_AtrankosFiltras.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Forma_Automobiliai.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Forma_Apie.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Forma_IstrintiAutomobili.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Forma_NaujaKelione.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Forma_KelioniuLentele.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Forma_Pagrindine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Forma_Parinktys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Forma_AutomobilisKelionei.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Forma_PridetiAutomobili.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Forma_Registracija.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Forma_KelionesSanaudos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Forma_Ataskaita.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Kelione.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Keliones.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KuroTipai.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KuroTipas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Prisijungimas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Salis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Salys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Vartotojai.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Vartotojas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
