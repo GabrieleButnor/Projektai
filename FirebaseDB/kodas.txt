@@ -1,0 +1,1007 @@
+// https://3002-da820b21-f0f4-4fc8-b9a3-1469af9b8f48.cs-europe-west4-bhnf.cloudshell.dev/?authuser=1
+// https://3004-cs-134697001032-default.cs-europe-west4-bhnf.cloudshell.dev/?authuser=1
+
+var express = require('express');
+var app = express();
+var bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
+
+var firebase = require('firebase/app');
+
+var dba = require('firebase/database');
+
+// DB paslaugu fragmento
+const firebaseConfig = {
+    apiKey: "AIzaSyA8XSmqh5YRSTV0XKToE3ukVD9i0KBzHxI",
+    authDomain: "veterinarija-ba906.firebaseapp.com",
+    databaseURL: "https://veterinarija.europe-west1.firebasedatabase.app",
+    projectId: "veterinarija-ba906",
+    storageBucket: "veterinarija-ba906.appspot.com",
+    messagingSenderId: "1079708936015",
+    appId: "1:1079708936015:web:ff58f1a7099d288c72473a",
+    measurementId: "G-6MLZFC32T2"
+  };
+
+// DB klientu fragmento
+const firebaseConfig1 = {
+    apiKey: "AIzaSyA8XSmqh5YRSTV0XKToE3ukVD9i0KBzHxI",
+    authDomain: "veterinarija-ba906.firebaseapp.com",
+    databaseURL: "https://veterinarija-ba906-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "veterinarija-ba906",
+    storageBucket: "veterinarija-ba906.appspot.com",
+    messagingSenderId: "1079708936015",
+    appId: "1:1079708936015:web:ff58f1a7099d288c72473a",
+    measurementId: "G-6MLZFC32T2"
+  };
+
+
+const fb = firebase.initializeApp(firebaseConfig);  // DB paslaugu fragmentas
+const fb1 = firebase.initializeApp(firebaseConfig1,'app2'); // DB klientu fragmentas 
+
+const database = dba.getDatabase(fb);  // DB paslaugu fragmentas
+const database1 = dba.getDatabase(fb1);  // DB klientu fragmentas 
+
+
+// Is kliento framgento tranzakcijos
+
+
+//------------------------------------------------------------------------------
+// Gyvuno visi vizitai
+//------------------------------------------------------------------------------
+function getAllPetVisits(petId){
+    const dbRefK = dba.ref(dba.getDatabase(fb1));
+    const dbRefP = dba.ref(dba.getDatabase(fb));
+    dba.get(dba.child(dbRefK, `DB_1/gyvunai/${'gyvunas::'+ petId}`)).then((snapshot) => {
+        if (snapshot.exists()) {
+          console.log("\nGyvūno duomenys:\n");
+          console.log(snapshot.key);
+          console.log(snapshot.val());  
+          
+            // gyvuno vizitu duomenus esanti DB_1 (rytines valandos) is abeju duomenu baziu ir klientu ir paslaugu
+            dba.get(dba.child(dbRefK, `DB_1/vizitai`)).then((snapshot) => {
+                console.log("\nGyvūno vizitai :\n");
+                snapshot.forEach((data)=>{
+                    if(data.val().fk_gyvunas_id == 'gyvunas::'+ petId)
+                    {
+                        //console.log(data.key, data.val());
+                        dba.get(dba.child(dbRefP, `DB_1/vizitai`)).then((snapshot) => {
+                            snapshot.forEach((dataP)=>{
+                                if(dataP.key == data.key)
+                                {
+                                    console.log(data.key, data.val());
+                                    console.log(dataP.val(), "\n");
+                                }
+                            })
+                        });
+                    }         
+                })
+
+            // gyvuno vizitu duomenus esanti DB_2 (vakarines valandos) is abeju duomenu baziu ir klientu ir paslaugu
+            dba.get(dba.child(dbRefK, `DB_2/vizitai`)).then((snapshot) => {
+                snapshot.forEach((data)=>{
+                    if(data.val().fk_gyvunas_id == 'gyvunas::'+ petId)
+                    {
+                        //console.log(data.key, data.val());
+                        dba.get(dba.child(dbRefP, `DB_2/vizitai`)).then((snapshot) => {
+                            snapshot.forEach((dataP)=>{
+                                if(dataP.key == data.key)
+                                {
+                                    console.log(data.key, data.val());
+                                    console.log(dataP.val(), "\n");
+                                }
+                            })
+                        });
+                    }         
+                })
+            });
+        });
+            
+        } else {
+          console.log("No data available");
+        }
+      }).catch((error) => {
+        console.error(error);
+      });   
+
+   
+}
+
+
+//------------------------------------------------------------------------------
+// Gydytojas sukuria nauja vizita
+//------------------------------------------------------------------------------
+function createNewVisit(gydytojasId, n_vizito_valanda,n_fk_gyvunas_id, n_kabinetas, n_komentaras, n_vizito_data, 
+        n_sudarymo_data, n_skubumas,  n_numeris, n_fk_prekes, n_fk_paslaugos)
+    {
+        const dbRefK = dba.ref(dba.getDatabase(fb1));
+        
+        // tikriname ar kuriantis vizita gydytojas egzituoja 
+        dba.get(dba.child(dbRefK, `DB_1/gydytojai/${'gydytojas::'+ gydytojasId}`)).then((snapshot) => {
+            if (snapshot.exists()) {
+              console.log("\nGydytojo duomenys:\n");
+              console.log(snapshot.key);
+              console.log(snapshot.val());
+              // nustatomas duombazese esantys naujausis, didziausi id 
+              var visit_id = 0;
+              var id_1 = 0;
+              var id_2 = 0;               
+              dba.get(dba.child(dbRefK, `DB_1/vizitai/`)).then((snapshot) => {
+                if (snapshot.exists()) {
+                    id_1 = snapshotVizitToArray(snapshot);
+                    dba.get(dba.child(dbRefK, `DB_2/vizitai/`)).then((snapshot) => {
+                        if (snapshot.exists()) {
+                            id_2 = snapshotVizitToArray(snapshot); 
+                            // randamas esantis naujausias id ir sukuriams naujas                      
+                            if(Number(id_1) > Number(id_2))
+                            {
+                                visit_id = Number(id_1) + 1
+                            }
+                            else
+                            {
+                                visit_id = Number(id_2) + 1
+                            }
+                            // tikrinamas vizito laikas horizontaliai padailinimui ivykdyti
+                            if(n_vizito_valanda  > "13:00")
+                            {
+                                // vakariniu vizitu horizontalus padalinimas
+                                var bazesKelias = 'DB_2/vizitai/vizitas::'+ visit_id;
+                                // vizitas ir atitinkami duomenys sukuriami klientu fragmente
+                                insertToKlientuFrag(bazesKelias, gydytojasId, n_fk_gyvunas_id, n_kabinetas, 
+                                    n_komentaras, n_vizito_data, n_vizito_valanda);
+                                // vizitas ir atitinkami duomenys sukuriami paslaugu fragmente
+                                insertToPaslauguFrag(bazesKelias, n_vizito_valanda,
+                                    n_sudarymo_data, n_skubumas,  n_numeris, n_fk_prekes, n_fk_paslaugos);
+                            }
+                            else
+                            {
+                                // rytiniu vizitu horizontalus padalinimas
+                                var bazesKelias = 'DB_1/vizitai/vizitas::'+ visit_id;
+                                // vizitas ir atitinkami duomenys sukuriami klientu fragmente
+                                insertToKlientuFrag(bazesKelias, gydytojasId, n_fk_gyvunas_id, n_kabinetas, 
+                                    n_komentaras, n_vizito_data, n_vizito_valanda);
+                                // vizitas ir atitinkami duomenys sukuriami paslaugu fragmente
+                                insertToPaslauguFrag(bazesKelias, n_vizito_valanda,
+                                    n_sudarymo_data, n_skubumas,  n_numeris, n_fk_prekes, n_fk_paslaugos);
+                            }                                  
+                        } 
+                        }).catch((error) => {
+                           console.error(error);
+                        });                  
+                    } 
+                    }).catch((error) => {
+                        console.error(error);
+                    });                   
+            } else {
+              console.log("Tokio gydytojo nera, uzklausa negalima.");
+            }
+          }).catch((error) => {
+            console.error(error);
+          });   
+
+}
+
+// paskutinio ikelto vizito id radimas
+function snapshotVizitToArray(snapshot) {
+    var returnArr = [];
+    snapshot.forEach(function(childSnapshot) {
+        var item = childSnapshot.key;
+        returnArr.push(item.replace('vizitas::',''));
+    });
+    returnArr.sort(function(a, b) {
+        return a - b;
+      });
+      var lastItem = returnArr.pop();
+    return lastItem;
+};
+
+//------------------------------------------------------------------------------
+// Naikinamas konkretus gyvunas, kartu ir vizitai su israsytais vaistais
+//------------------------------------------------------------------------------
+function deletePet(petId)
+{
+    const dbRefK = dba.ref(dba.getDatabase(fb1));
+    const dbRefP = dba.ref(dba.getDatabase(fb));
+    dba.get(dba.child(dbRefK, `DB_1/gyvunai/${'gyvunas::'+ petId}`)).then((snapshot) => {
+        if (snapshot.exists()) {
+            
+            dba.get(dba.child(dbRefK, `DB_1/vizitai/`)).then((snapshot) => {
+                snapshot.forEach((data)=>{
+                    if(data.val().fk_gyvunas_id == 'gyvunas::'+ petId)
+                    {                        
+                        dba.get(dba.child(dbRefP, `DB_1/receptiniai_vaistai/`)).then((snapshot) => {
+                            snapshot.forEach((dataP)=>{
+                                if(dataP.val().fk_vizitas_id == data.key)
+                                {                                    
+                                    dba.remove(dba.ref(database, `DB_1/receptiniai_vaistai/` + dataP.key));                                    
+                                }
+                            })
+                        });                                                            
+                        dba.remove(dba.ref(database1, `DB_1/vizitai/` + data.key));
+                        dba.remove(dba.ref(database, `DB_1/vizitai/` + data.key));   
+                    }         
+                 })
+            });
+
+            dba.get(dba.child(dbRefK, `DB_2/vizitai/`)).then((snapshot) => {
+                snapshot.forEach((data)=>{
+                    if(data.val().fk_gyvunas_id == 'gyvunas::'+ petId)
+                    {
+                        dba.get(dba.child(dbRefP, `DB_2/receptiniai_vaistai/`)).then((snapshot) => {
+                            snapshot.forEach((dataP)=>{
+                                if(dataP.val().fk_vizitas_id == data.key)
+                                {
+                                    dba.remove(dba.ref(database, `DB_2/receptiniai_vaistai/` + dataP.key));                                     
+                                }
+                            })
+                        });                                                            
+                        dba.remove(dba.ref(database1, `DB_2/vizitai/` + data.key));
+                        dba.remove(dba.ref(database, `DB_2/vizitai/` + data.key));  
+                    }         
+                 })
+            });            
+            
+            dba.remove(dba.ref(database1, 'DB_1/gyvunai/gyvunas::' + petId));
+            dba.remove(dba.ref(database1, 'DB_2/gyvunai/gyvunas::' + petId));
+        
+        } else {
+          console.log("No data available");
+        }
+      }).catch((error) => {
+        console.error(error);
+      });   
+}
+
+//------------------------------------------------------------------------------
+// Atnaujinti vizito duomenis
+//------------------------------------------------------------------------------
+function updateVisit(vizitasId, n_vizito_valanda, n_fk_gydytojas_id, n_fk_gyvunas_id, n_kabinetas, n_komentaras, n_vizito_data, 
+    n_sudarymo_data, n_skubumas,  n_numeris, n_fk_prekes, n_fk_paslaugos)
+{
+    const visitKData = {
+     fk_gydytojas_id : n_fk_gydytojas_id,
+     fk_gyvunas_id: n_fk_gyvunas_id,
+     kabinetas: n_kabinetas,
+     komentaras: n_komentaras,
+     vizito_data: n_vizito_data,
+     vizito_valanda: n_vizito_valanda
+    };
+    const visitPData ={
+        sudarymo_data: n_sudarymo_data,
+        skubumas: n_skubumas,
+        numeris: n_numeris,
+        vizito_valanda: n_vizito_valanda,
+        fk_prekes: n_fk_prekes,
+        fk_paslaugos: n_fk_paslaugos
+    };
+
+    const dbRefK = dba.ref(dba.getDatabase(fb1));
+    const dbRefP = dba.ref(dba.getDatabase(fb));
+
+    const updates = {};
+
+    // vizitas yra 1 duomenu bazeje
+    dba.get(dba.child(dbRefK, `DB_1/vizitai/${'vizitas::'+ vizitasId}` )).then((snapshot) => {
+        if (snapshot.exists()) {
+            console.log(snapshot.key);
+            console.log(snapshot.val());
+            // Db_1 neturi vakariniu laiku keliasi i Db_2
+            if(n_vizito_valanda  > "13:00")  
+            {
+                dba.remove(dba.ref(database1, `DB_1/vizitai/vizitas::`+ vizitasId));
+                dba.remove(dba.ref(database, `DB_1/vizitai/vizitas::`+ vizitasId));
+
+                var bazesKelias = 'DB_2/vizitai/vizitas::'+ vizitasId;
+                insertToKlientuFrag(bazesKelias, n_fk_gydytojas_id, n_fk_gyvunas_id, n_kabinetas, 
+                    n_komentaras, n_vizito_data, n_vizito_valanda);
+                insertToPaslauguFrag(bazesKelias, n_vizito_valanda,
+                    n_sudarymo_data, n_skubumas,  n_numeris, n_fk_prekes, n_fk_paslaugos);
+
+               console.log("Perkialiami vaistai: ");
+               dba.get(dba.child(dbRefP, `DB_1/receptiniai_vaistai/`)).then((snapshot) => {
+                    snapshot.forEach((data)=>{    
+                        
+                        if(data.val().fk_vizitas_id == `vizitas::`+ vizitasId)
+                        {                            
+                            console.log(data.key);
+                            var bazesKelias = 'DB_2/receptiniai_vaistai/'+ data.key;
+                            insertvaistai(bazesKelias, vizitasId, data.val().galiojimo_pabaiga, data.val().kaina, data.val().kodas,
+                                data.val().komentaras, data.val().paskirtis, data.val().pavadinimas);
+
+                            dba.remove(dba.ref(database, `DB_1/receptiniai_vaistai/`+ data.key));
+                        }
+                    })
+                });
+            }
+            // Db_1 turi rytinius laikus
+            else{
+                // laikas esamo nepasikeicia
+                updates['DB_1/vizitai/vizitas::' + vizitasId + '/' ] = visitKData;
+                dba.update(dba.ref(database1), updates);
+                dba.get(dba.child(dbRefP, `DB_1/vizitai/${'vizitas::'+ vizitasId}` )).then((snapshot) => {
+                    updates['DB_1/vizitai/vizitas::' + vizitasId + '/' ] = visitPData;
+                    dba.update(dba.ref(database), updates);
+                });
+            }            
+            
+          } else {
+            console.log("No data available");
+          }
+    }).catch((error) => {
+        console.error(error);
+    });
+
+
+    // vizitas yra 2 duomenu bazeje
+    dba.get(dba.child(dbRefK, `DB_2/vizitai/${'vizitas::'+ vizitasId}` )).then((snapshot) => {
+        if (snapshot.exists()) {
+            console.log(snapshot.key);
+            console.log(snapshot.val());
+            // Db_2 turi vakariniu laiku 
+            if(n_vizito_valanda  > "13:00")  
+            {
+                // laikas esamo nepasikeicia
+                updates['DB_2/vizitai/vizitas::' + vizitasId + '/' ] = visitKData;
+                dba.update(dba.ref(database1), updates);
+                dba.get(dba.child(dbRefP, `DB_2/vizitai/${'vizitas::'+ vizitasId}` )).then((snapshot) => {
+                    updates['DB_2/vizitai/vizitas::' + vizitasId + '/' ] = visitPData;
+                    dba.update(dba.ref(database), updates);
+                });
+            }
+            // Db_2 neturi rytiniu laiku keliasi i Db_1
+            else{
+                dba.remove(dba.ref(database1, `DB_2/vizitai/vizitas::`+ vizitasId));
+                dba.remove(dba.ref(database, `DB_2/vizitai/vizitas::`+ vizitasId));
+
+                var bazesKelias = 'DB_1/vizitai/vizitas::'+ vizitasId;
+                insertToKlientuFrag(bazesKelias, n_fk_gydytojas_id, n_fk_gyvunas_id, n_kabinetas, 
+                    n_komentaras, n_vizito_data, n_vizito_valanda);
+                insertToPaslauguFrag(bazesKelias, n_vizito_valanda,
+                    n_sudarymo_data, n_skubumas,  n_numeris, n_fk_prekes, n_fk_paslaugos);
+
+               console.log("Perkialiami vaistai: ");
+               dba.get(dba.child(dbRefP, `DB_2/receptiniai_vaistai/`)).then((snapshot) => {
+                    snapshot.forEach((data)=>{    
+                        
+                        if(data.val().fk_vizitas_id == `vizitas::`+ vizitasId)
+                        {                            
+                            console.log(data.key);
+                            var bazesKelias = 'DB_1/receptiniai_vaistai/'+ data.key;
+                            insertvaistai(bazesKelias, vizitasId, data.val().galiojimo_pabaiga, data.val().kaina, data.val().kodas,
+                                data.val().komentaras, data.val().paskirtis, data.val().pavadinimas);
+
+                            dba.remove(dba.ref(database, `DB_2/receptiniai_vaistai/`+ data.key));
+                        }
+                    })
+                });
+            }           
+            
+          } else {
+            console.log("No data available");
+          }
+    }).catch((error) => {
+        console.error(error);
+    });
+}
+
+
+// vizito atitinkamu duomenu irasymas i klientu duomenu bazes fragmenta
+function insertToKlientuFrag(bazesKelias, gydytojasId, n_fk_gyvunas_id, n_kabinetas, 
+    n_komentaras, n_vizito_data, n_vizito_valanda)
+{
+    dba.set(dba.ref(database1, bazesKelias), {
+        fk_gydytojas_id: 'gydytojas::' + gydytojasId,
+        fk_gyvunas_id: 'gyvunas::' + n_fk_gyvunas_id,
+        kabinetas: n_kabinetas,
+        komentaras: n_komentaras,
+        vizito_data: n_vizito_data,
+        vizito_valanda: n_vizito_valanda
+      }); 
+}
+
+// vizito atitinkamu duomenu irasymas i paslaugu duomenu bazes fragmenta
+function insertToPaslauguFrag(bazesKelias, n_vizito_valanda,
+    n_sudarymo_data, n_skubumas,  n_numeris, n_fk_prekes, n_fk_paslaugos)
+{
+    dba.set(dba.ref(database, bazesKelias), {
+        sudarymo_data: n_sudarymo_data,
+        skubumas: n_skubumas,
+        numeris: n_numeris,
+        vizito_valanda: n_vizito_valanda,
+        fk_prekes: n_fk_prekes,
+        fk_paslaugos: n_fk_paslaugos
+      }); 
+}
+
+
+// API
+
+//------------------------------------------------------------------------------
+// API gyvuno visi vizitai 
+//------------------------------------------------------------------------------
+app._router
+app.get('/gyvunai/:petId', async (req, res) => {
+    var id = req.param('petId');
+    res.send("HTTP GET Request");
+    getAllPetVisits(id);
+});
+
+
+//------------------------------------------------------------------------------
+// API gydytojas sukuria nauja vizita
+//------------------------------------------------------------------------------
+app.post('/gydytojai/:gydytojasId/vizitai', function (req, res) {
+    var id = req.param('gydytojasId');
+    console.log("HTTP POST Request");
+    res.send("HTTP POST Request");
+
+    var fk_gyvunas_id = req.body.fk_gyvunas_id;
+    var kabinetas = req.body.kabinetas;
+    var komentaras = req.body.komentaras;
+    var vizito_data = req.body.vizito_data;
+    var vizito_valanda = req.body.vizito_valanda;
+    var sudarymo_data = req.body.sudarymo_data;
+    var skubumas = req.body.skubumas;
+    var numeris = req.body.numeris;
+    var fk_prekes = req.body.fk_prekes;
+    var fk_paslaugos = req.body.fk_paslaugos;
+    
+    createNewVisit(id, vizito_valanda,fk_gyvunas_id, kabinetas, komentaras, vizito_data, 
+        sudarymo_data, skubumas,  numeris, fk_prekes, fk_paslaugos);  
+  });
+
+
+//------------------------------------------------------------------------------
+// API naikinamas konkretus gyvunas, kartu ir vizitai su israsytais vaistais
+//------------------------------------------------------------------------------
+app.delete('/gyvunai/:petId', function (req, res) {
+    var id = req.param('petId');
+    console.log("HTTP DELETE Request");
+    res.send("HTTP DELETE Request");
+    deletePet(id);
+  });
+
+
+//------------------------------------------------------------------------------
+// API atnaujinti vizito duomenis
+//------------------------------------------------------------------------------
+app.put('/vizitai/:vizitaiId', function (req, res) {
+    var id = req.param('vizitaiId');
+    console.log("HTTP Put Request");
+    res.send("HTTP PUT Request");
+
+    var fk_gydytojas_id = req.body.fk_gydytojas_id;
+    var fk_gyvunas_id = req.body.fk_gyvunas_id;
+    var kabinetas = req.body.kabinetas;
+    var komentaras = req.body.komentaras;
+    var vizito_data = req.body.vizito_data;
+    var vizito_valanda = req.body.vizito_valanda;
+    var sudarymo_data = req.body.sudarymo_data;
+    var skubumas = req.body.skubumas;
+    var numeris = req.body.numeris;
+    var fk_prekes = req.body.fk_prekes;
+    var fk_paslaugos = req.body.fk_paslaugos;
+
+    updateVisit(id, vizito_valanda, fk_gydytojas_id, fk_gyvunas_id, kabinetas, komentaras, vizito_data, 
+        sudarymo_data, skubumas,  numeris, fk_prekes, fk_paslaugos )
+  });
+  
+  
+
+
+// Is paslaugu fragmento tranzakcijos
+
+
+//------------------------------------------------------------------------------
+// Rasti gyvuna kuriam israsytas receptinis vaistas
+//------------------------------------------------------------------------------
+
+function getMedicineOfPet(medicineId){
+    const dbRefK = dba.ref(dba.getDatabase(fb1));
+    const dbRefP = dba.ref(dba.getDatabase(fb));
+
+    dba.get(dba.child(dbRefP, `DB_1/receptiniai_vaistai/`)).then((snapshot) =>{
+        snapshot.forEach((data)=>{
+            if(data.key == 'receptinis_vaistas::'+ medicineId)
+            {
+                console.log("\nReceptinio vaisto duomenys:\n");
+                console.log(data.key);
+                console.log(data.val());
+                dba.get(dba.child(dbRefP, `DB_1/vizitai/`)).then((snapshot) =>{
+                    snapshot.forEach((dataP)=>{
+                        if(dataP.key == data.val().fk_vizitas_id)
+                        {
+                            console.log("\nGyvunas kuriam yra israsytas receptinis vaistas duomenys:\n");
+                            dba.get(dba.child(dbRefK, `DB_1/vizitai/`)).then((snapshot) => {                                
+                                snapshot.forEach((dataV)=>{
+                                    if(dataV.key == dataP.key )
+                                    {
+                                    dba.get(dba.child(dbRefK, `DB_1/gyvunai/`)).then((snapshot) =>{
+                                        snapshot.forEach((dataG)=>{                                         
+                                            if(dataG.key == dataV.val().fk_gyvunas_id)
+                                            {
+                                                console.log(dataG.key);
+                                                console.log(dataG.val());
+                                            }
+                                        })
+                                    });
+                                    }                                 
+                                })
+                                
+                            });
+                        }
+                    })
+                });
+            }
+        })
+    });
+
+    dba.get(dba.child(dbRefP, `DB_2/receptiniai_vaistai/`)).then((snapshot) =>{
+        snapshot.forEach((data)=>{
+            if(data.key == 'receptinis_vaistas::'+ medicineId)
+            {
+                console.log("\nReceptinio vaisto duomenys:\n");
+                console.log(data.key);
+                console.log(data.val());
+                dba.get(dba.child(dbRefP, `DB_2/vizitai/`)).then((snapshot) =>{
+                    snapshot.forEach((dataP)=>{
+                        if(dataP.key == data.val().fk_vizitas_id)
+                        {
+                            console.log("\nGyvunas kuriam yra israsytas receptinis vaistas duomenys:\n");
+                            dba.get(dba.child(dbRefK, `DB_2/vizitai/`)).then((snapshot) => {                                
+                                snapshot.forEach((dataV)=>{
+                                    if(dataV.key == dataP.key )
+                                    {
+                                    dba.get(dba.child(dbRefK, `DB_1/gyvunai/`)).then((snapshot) =>{
+                                        snapshot.forEach((dataG)=>{                                         
+                                            if(dataG.key == dataV.val().fk_gyvunas_id)
+                                            {
+                                                console.log(dataG.key);
+                                                console.log(dataG.val());
+                                            }
+                                        })
+                                    });
+                                    }                                 
+                                })                                
+                            });
+                        }
+                    })
+                });
+            }
+        })
+    });
+}
+
+//------------------------------------------------------------------------------
+// Naikina paslauga
+//------------------------------------------------------------------------------
+function deleteService(paslaugosId){
+
+    const dbRefK = dba.ref(dba.getDatabase(fb1));
+    const dbRefP = dba.ref(dba.getDatabase(fb));
+
+    dba.get(dba.child(dbRefP, `DB_1/paslaugos/${'paslauga::'+ paslaugosId}`)).then((snapshotP) => {
+        if (snapshotP.exists()) {
+          console.log(snapshotP.key);
+          console.log(snapshotP.val());
+          dba.remove(dba.ref(database, `DB_1/paslaugos/`+ snapshotP.key));
+          dba.remove(dba.ref(database, `DB_2/paslaugos/`+ snapshotP.key));
+
+        dba.get(dba.child(dbRefP, `DB_1/vizitai/`)).then((snapshot) => {       
+                snapshot.forEach((dataV)=>{              
+                    dataV.val().fk_paslaugos.forEach((dataPaslaugos)=>{
+                        if(dataPaslaugos.fk_paslauga_id == snapshotP.key )
+                        {
+                            console.log(dataV.key);
+                            const visitPData ={
+                                sudarymo_data: dataV.val().sudarymo_data,
+                                skubumas: dataV.val().skubumas,
+                                numeris: dataV.val().numeris,
+                                vizito_valanda: dataV.val().vizito_valanda,
+                                fk_prekes: dataV.val().fk_prekes
+                            };
+                            const updates = {};
+                            updates['DB_1/vizitai/' + dataV.key + '/' ] = visitPData;
+                            dba.update(dba.ref(database), updates);
+
+                            dba.get(dba.child(dbRefK, `DB_1/vizitai/`)).then((snapshot) => {                                
+                                snapshot.forEach((dataKv)=>{
+                                    if(dataKv.key == dataV.key)
+                                    {
+                                        if(dataKv.val().fk_gydytojas_id != 'gydytojas::1')
+                                        {
+                                            console.log(dataKv.val().fk_gydytojas_id);
+                                            const visitKData = {
+                                                fk_gydytojas_id : 'gydytojas::1',
+                                                fk_gyvunas_id: dataKv.val().fk_gyvunas_id,
+                                                kabinetas: dataKv.val().kabinetas,
+                                                komentaras: dataKv.val().komentaras,
+                                                vizito_data: dataKv.val().vizito_data,
+                                                vizito_valanda: dataKv.val().vizito_valanda
+                                            };
+                                            const updates = {};
+                                            updates['DB_1/vizitai/' + dataV.key + '/' ] = visitKData;
+                                            dba.update(dba.ref(database1), updates);
+                                            dba.remove(dba.ref(database1, `DB_1/gydytojai/`+ dataKv.val().fk_gydytojas_id));
+                                            dba.remove(dba.ref(database1, `DB_2/gydytojai/`+ dataKv.val().fk_gydytojas_id));
+                                        }
+                                    }
+                                })
+                            });
+                        }                    
+                    })
+                })
+        });
+
+        dba.get(dba.child(dbRefP, `DB_2/vizitai/`)).then((snapshot) => {       
+            snapshot.forEach((dataV)=>{              
+                dataV.val().fk_paslaugos.forEach((dataPaslaugos)=>{
+                    if(dataPaslaugos.fk_paslauga_id == snapshotP.key )
+                    {
+                        console.log(dataV.key);
+                        const visitPData ={
+                            sudarymo_data: dataV.val().sudarymo_data,
+                            skubumas: dataV.val().skubumas,
+                            numeris: dataV.val().numeris,
+                            vizito_valanda: dataV.val().vizito_valanda,
+                            fk_prekes: dataV.val().fk_prekes
+                        };
+                        const updates = {};
+                        updates['DB_2/vizitai/' + dataV.key + '/' ] = visitPData;
+                        dba.update(dba.ref(database), updates);
+
+                        dba.get(dba.child(dbRefK, `DB_2/vizitai/`)).then((snapshot) => {                                
+                            snapshot.forEach((dataKv)=>{
+                                if(dataKv.key == dataV.key)
+                                {
+                                    if(dataKv.val().fk_gydytojas_id != 'gydytojas::1')
+                                    {
+                                        console.log(dataKv.val().fk_gydytojas_id);
+                                        const visitKData = {
+                                            fk_gydytojas_id : 'gydytojas::1',
+                                            fk_gyvunas_id: dataKv.val().fk_gyvunas_id,
+                                            kabinetas: dataKv.val().kabinetas,
+                                            komentaras: dataKv.val().komentaras,
+                                            vizito_data: dataKv.val().vizito_data,
+                                            vizito_valanda: dataKv.val().vizito_valanda
+                                        };
+                                        const updates = {};
+                                        updates['DB_2/vizitai/' + dataV.key + '/' ] = visitKData;
+                                        dba.update(dba.ref(database1), updates);
+                                        dba.remove(dba.ref(database1, `DB_1/gydytojai/`+ dataKv.val().fk_gydytojas_id));
+                                        dba.remove(dba.ref(database1, `DB_2/gydytojai/`+ dataKv.val().fk_gydytojas_id));
+                                    }
+                                }
+                            })
+                        });
+                    }                    
+                })
+            })
+    });
+         
+
+
+        } else {
+          console.log("No data available");
+        }
+      }).catch((error) => {
+        console.error(error);
+      });
+}
+
+
+//------------------------------------------------------------------------------
+// API gyvuno kuriam israsytas receptinis vaistas
+//------------------------------------------------------------------------------
+app._router
+app.get('/receptiniai_vaistai/:receptinisvaiastasId', async (req, res) => {
+    var id = req.param('receptinisvaiastasId');
+    res.send("HTTP GET Request");
+    getMedicineOfPet(id);
+});
+
+//------------------------------------------------------------------------------
+// API naikina paslauga
+//------------------------------------------------------------------------------
+app.delete('/paslaugos/:paslaugaId', function (req, res) {
+    var id = req.param('paslaugaId');
+    console.log("HTTP DELETE Request");
+    res.send("HTTP DELETE Request");
+    deleteService(id);
+  });
+
+
+
+// Receptiniai vaistai:
+
+// paskutinio ikelto vaisto id radimas
+function snapshotToArray(snapshot) {
+    var returnArr = [];
+
+    snapshot.forEach(function(childSnapshot) {
+        var item = childSnapshot.key;
+        returnArr.push(item.replace('receptinis_vaistas::',''));
+    });
+
+    returnArr.sort(function(a, b) {
+        return a - b;
+      });
+      var lastItem = returnArr.pop();
+
+    return lastItem;
+};
+
+// naujo receptinio vaisto iterpimas
+function writevaistas(vizito_id, pabaigos_data, kainas, kodass, komentarass, paskirtiss, pavadinimas) {
+    const dbRef = dba.ref(dba.getDatabase(fb));
+    const db1 = dba.child(dbRef, 'DB_1/vizitai/vizitas::'+vizito_id)
+    const db2 = dba.child(dbRef, 'DB_2/vizitai/vizitas::'+vizito_id)     
+
+    // jei vizitas priklauso db1 
+    dba.get(db1).then((snapshot) => {
+        if (snapshot.exists()) {
+            const a = dba.child(dbRef, 'DB_1/receptiniai_vaistai/')
+            var id = 0
+            dba.get(a).then((snapshot) => {
+                if (snapshot.exists()) {
+                    id = snapshotToArray(snapshot)
+                    console.log(id);
+                    var z =  Number(id)+5001
+                    var zodis = 'DB_1/receptiniai_vaistai/receptinis_vaistas::'+ z;
+                    insertvaistai(zodis,vizito_id, pabaigos_data, kainas, kodass,komentarass,paskirtiss,pavadinimas)                    
+                     
+                } else {
+                  console.log("No data available");
+                }
+              }).catch((error) => {
+                console.error(error);
+              });
+              
+        } else {
+          console.log("No data available");
+        }
+      }).catch((error) => {
+        console.error(error);
+      });  
+    // jei vizitas priklauso db2
+    dba.get(db2).then((snapshot) => {
+        if (snapshot.exists()) {
+            const a = dba.child(dbRef, 'DB_2/receptiniai_vaistai/')
+            var id = 0
+            dba.get(a).then((snapshot) => {
+                if (snapshot.exists()) {
+                    id = snapshotToArray(snapshot)
+                    console.log(id);
+                    var z =  Number(id)+5001
+                    var zodis = 'DB_2/receptiniai_vaistai/receptinis_vaistas::'+ z;
+                    insertvaistai(zodis,vizito_id, pabaigos_data, kainas, kodass,komentarass,paskirtiss,pavadinimas)                    
+                     
+                } else {
+                  console.log("No data available");
+                }
+              }).catch((error) => {
+                console.error(error);
+              });
+              
+        } else {
+          console.log("No data available");
+        }
+      }).catch((error) => {
+        console.error(error);
+      });  
+}
+
+
+function vizitovieta(dbvieta){
+    dba.get(dbvieta).then((snapshot) => {
+        if (snapshot.exists()) {
+            return true;   
+        } else {
+            return false;
+        }
+      }).catch((error) => {
+        console.error(error);
+      });  
+      return false;
+}
+
+// iterpiamas i duomenu baze naujas receptinis vaistas
+function insertvaistai(vietastring,vizito_id, pabaigos_data, kainas, kodass,komentarass,paskirtiss,pavadinimas){
+    dba.set(dba.ref(database, vietastring), {
+        fk_vizitas_id: 'vizitas::'+vizito_id,
+        galiojimo_pabaiga: pabaigos_data,
+        kaina : kainas,
+        kodas: kodass,
+        komentaras : komentarass,
+        paskirtis : paskirtiss,
+        pavadinimas : pavadinimas
+      }); 
+}
+
+function updatevaistas(ids,vizito_id, pabaigos_data, kainas, kodass,komentarass,paskirtiss,pavadinimas) {  
+    // A post entry.
+    const postData = {
+        fk_vizitas_id: 'vizitas::'+vizito_id,
+        galiojimo_pabaiga: pabaigos_data,
+        kaina : kainas,
+        kodas: kodass,
+        komentaras : komentarass,
+        paskirtis : paskirtiss,
+        pavadinimas : pavadinimas
+    };
+
+
+    const dbRef = dba.ref(dba.getDatabase(fb));
+    // vizitu tikrinimui.
+    const db1 = dba.child(dbRef, 'DB_1/vizitai/vizitas::'+vizito_id)
+    const db2 = dba.child(dbRef, 'DB_2/vizitai/vizitas::'+vizito_id) 
+    //receptu tikrinimui
+    const db11 = dba.child(dbRef, 'DB_1/receptiniai_vaistai/receptinis_vaistas::'+ids)
+    const db22 = dba.child(dbRef, 'DB_2/receptiniai_vaistai/receptinis_vaistas::'+ids) 
+    
+    const updates = {};
+    
+    //jei 1
+    dba.get(db1).then((snapshot) => {
+        if (snapshot.exists()) {//vizitas egzistuoja db1
+            console.log('egzistuoja 1');
+            dba.get(db11).then((snapshot) => {
+                if (snapshot.exists()) {//vaistas egzistuoja db1
+                    console.log('vaistas egzistuoja 1 '+ids);
+                    dba.get(dba.child(dbRef, `DB_1/receptiniai_vaistai/${'receptinis_vaistas::'+ ids}`)).then((snapshot) => {
+                        if (snapshot.exists()) {
+                            updates['DB_1/receptiniai_vaistai/receptinis_vaistas::' + ids + '/' ] = postData;
+                            return dba.update(dba.ref(database), updates);
+                        } else {
+                          console.log("No data available");
+                        }
+                      }).catch((error) => {
+                        console.error(error);
+                      });
+        
+                    
+                } else {}
+              }).catch((error) => {
+                console.error(error);
+            });  
+
+            dba.get(db22).then((snapshot) => {
+                if (snapshot.exists()) {//vaistas egzistuoja db2
+                    console.log('vaistas egzistuoja 2 '+ids);
+
+                   //delete
+                   dba.remove(dba.ref(database, 'DB_2/receptiniai_vaistai/receptinis_vaistas::'+ids));
+                   
+                   //insert
+                   const a = dba.child(dbRef, 'DB_1/receptiniai_vaistai/')
+                   var id = 0
+                   dba.get(a).then((snapshot) => {
+                       if (snapshot.exists()) {
+                           id = snapshotToArray(snapshot)
+                           console.log(id);
+                           var z =  Number(id)+1
+                           var zodis = 'DB_1/receptiniai_vaistai/receptinis_vaistas::'+ z;
+                           insertvaistai(zodis,vizito_id, pabaigos_data, kainas, kodass,komentarass,paskirtiss,pavadinimas)
+                           
+                            
+                       } else {
+                         console.log("No data available");
+                       }
+                     }).catch((error) => {
+                       console.error(error);
+                     });
+                    
+                } else {}
+              }).catch((error) => {
+                console.error(error);
+            });  
+
+        } else {
+            
+        }
+      }).catch((error) => {
+        console.error(error);
+    });  
+
+
+    dba.get(db2).then((snapshot) => {
+        if (snapshot.exists()) {//vizitas egzistuoja db2
+            console.log('egzistuoja 2');
+            dba.get(db11).then((snapshot) => {
+                if (snapshot.exists()) {//vaistas egzistuoja db1
+                    console.log('vaistas egzistuoja 1 ' + ids);
+                    //delete is 1
+                    dba.remove(dba.ref(database, 'DB_1/receptiniai_vaistai/receptinis_vaistas::'+ids));
+
+                    //insert i 2
+                    const a = dba.child(dbRef, 'DB_1/receptiniai_vaistai/')
+                    var id = 0
+                    dba.get(a).then((snapshot) => {
+                        if (snapshot.exists()) {
+                            id = snapshotToArray(snapshot)
+                            console.log(id);
+                            var z =  Number(id)+1
+                            var zodis = 'DB_2/receptiniai_vaistai/receptinis_vaistas::'+ z;
+                            insertvaistai(zodis,vizito_id, pabaigos_data, kainas, kodass,komentarass,paskirtiss,pavadinimas)
+                            
+                             
+                        } else {
+                          console.log("No data available");
+                        }
+                      }).catch((error) => {
+                        console.error(error);
+                      });
+                } else {}
+              }).catch((error) => {
+                console.error(error);
+            });  
+
+            dba.get(db22).then((snapshot) => {
+                if (snapshot.exists()) {//vaistas egzistuoja db2
+                    console.log('vaistas egzistuoja 2 ' + ids);
+
+                   //update
+                   dba.get(dba.child(dbRef, `DB_2/receptiniai_vaistai/${'receptinis_vaistas::'+ ids}`)).then((snapshot) => {
+                    if (snapshot.exists()) {
+                        updates['DB_2/receptiniai_vaistai/receptinis_vaistas::' + ids + '/' ] = postData;
+                        return dba.update(dba.ref(database), updates);
+                    } else {
+                      console.log("No data available");
+                    }
+                  }).catch((error) => {
+                    console.error(error);
+                  });
+                } else {}
+              }).catch((error) => {
+                console.error(error);
+            });  
+
+        } else {
+            
+        }
+      }).catch((error) => {
+        console.error(error);
+    });  
+
+    
+}
+
+// API iskietimai
+// ----------------------------------------------------------------------------
+
+
+// //GET PUT POST DELETE
+// app.get('/vaistai/:id', async (req, res) => {
+//     var id = req.param('id');
+//     res.send("HTTP GET Request");
+    
+//     getAllPets(id);
+// });
+ 
+app.post('/vaistai/', function (req, res) {
+    console.log("HTTP POST Request");
+    res.send("HTTP POST Request");  
+  
+    writevaistas('9','2015.12.14','25','999','4tabl ','Ninfa','Ara')
+  });
+
+app.put('/vaistai/:id', function (req, res) {
+    console.log("HTTP Put Request");
+    res.send("HTTP PUT Request");
+    var id = req.param('id');
+
+    updatevaistas(id,'1','12399','159','2011.11.11','111','111','111')
+  });
+
+
+
+//Klausytojas ir portas 
+// ----------------------------------------------------------------------------
+
+var server = app.listen(3004, function () {
+
+  var host = server.address().address;
+  var port = server.address().port;
+
+  console.log("Example app listening at http://%s:%s", host, port);
+});
