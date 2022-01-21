@@ -1,0 +1,67 @@
+﻿@model IEnumerable<L2_veterinarija.Models.Seimininkas>
+
+@{
+    ViewBag.Title = "Šeimininkai";
+}
+
+<h2>Šeimininkai</h2>
+
+<p>
+    @Html.ActionLink("Naujas šeimininkas", "Create", "Seimininkas", new { @class = "btn btn-success" })
+</p>
+
+<table class="table table-striped datatable">
+    <thead>
+        <tr style="background-color: lightblue">
+            <th>
+                @Html.DisplayNameFor(model => model.kodas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.vardas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pavarde)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.epastas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.telefonas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.adresas)
+            </th>
+            <th style="width: 18%"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.kodas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.vardas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pavarde)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.epastas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.telefonas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.adresas)
+            </td>
+            <td>
+                @Html.ActionLink("Redaguoti", "Edit", new { kodas = item.kodas }, new { @class = "btn btn-primary action" })
+                @Html.ActionLink("Šalinti", "Delete", new { kodas = item.kodas }, new { @class = "btn btn-danger action" })
+            </td>
+        </tr>
+        }
+    </tbody>
+
+</table>

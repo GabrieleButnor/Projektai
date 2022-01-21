@@ -1,0 +1,64 @@
+﻿@model L2_veterinarija.ViewModels.SaskaitaEditViewModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Sąskaitos šalinimas</h2>
+
+<h3>Ar tikrai norite pašalinti sąskaita?</h3>
+<div>
+    <h4>Sąskaitos šalinimas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.numeris)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numeris)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.data)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mokejimobudas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mokejimobudas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.svizitas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.svizitas)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            @if (ViewBag.naudojama != null)
+            {
+                <h5>ViewBag.naudojama</h5>
+            }
+            else
+            {
+                <input type="submit" value="Šalinti" class="btn btn-danger" />
+            }
+            @Html.ActionLink("Atgal į sąrašą", "Index", "Saskaita", new { @class = "btn btn-default" })
+        </div>
+    }
+</div>

@@ -1,0 +1,54 @@
+﻿@model IEnumerable<L2_veterinarija.Models.Paslauga>
+
+@{
+    ViewBag.Title = "Paslaugos";
+}
+
+<h2>Paslaugos</h2>
+<p>
+    @Html.ActionLink("Nauja paslauga", "Create", "Paslauga", new { @class = "btn btn-success" })
+</p>
+<table class="table table-striped datatable">
+    <thead>
+        <tr style="background-color: lightblue">
+            <th>
+                @Html.DisplayNameFor(model => model.paslaugoskodas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tipas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.kaina)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.trukme)
+            </th>
+            <th style="width: 18%"></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.paslaugoskodas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tipas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.kaina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.trukme)
+            </td>
+            <td>
+                @Html.ActionLink("Redaguoti", "Edit", new { kodas = item.paslaugoskodas }, new { @class = "btn btn-primary action" })
+                @Html.ActionLink("Šalinti", "Delete", new { kodas = item.paslaugoskodas }, new { @class = "btn btn-danger action" })
+            </td>
+        </tr>
+        }
+    </tbody>
+
+</table>

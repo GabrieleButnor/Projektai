@@ -1,0 +1,61 @@
+﻿@model L2_veterinarija.Models.Paslauga
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Paslaugos šalinimas</h2>
+
+<h3>Ar tikrai norite pašalinti paslaugą?</h3>
+<div>
+    <h4>Paslauga</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.paslaugoskodas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.paslaugoskodas)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.tipas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipas)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.kaina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kaina)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.trukme)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trukme)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            @if (ViewBag.naudojama != null)
+            {
+                <h5 style="color:red">@ViewBag.naudojama</h5>
+            }
+            else
+            {
+                <input type="submit" value="Šalinti" class="btn btn-danger" />
+            }
+            @Html.ActionLink("Atgal į sąrašą", "Index", "Paslaugos", new { @class = "btn btn-default" })
+        </div>
+    }
+</div>

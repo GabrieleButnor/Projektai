@@ -1,0 +1,72 @@
+﻿@model IEnumerable<L2_veterinarija.ViewModels.GyvunasViewModel>
+
+@{
+    ViewBag.Title = "Gyvūnai";
+}
+
+<h2>Gyvūnai</h2>
+
+<p>
+    @Html.ActionLink("Naujas gyvūnas", "Create", "Gyvunas", new { @class = "btn btn-success"})
+</p>
+<table class="table table-striped datatable">
+    <thead>
+        <tr style="background-color: lightblue">
+            <th>
+                @Html.DisplayNameFor(model => model.cipsas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rusis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tipas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.vardas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.gimimodata)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.svoris)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.seimininkas)
+            </th>
+            <th style="width: 18%"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.cipsas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rusis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tipas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.vardas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gimimodata)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.svoris)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.seimininkas)
+            </td>
+            <td>
+                @Html.ActionLink("Redaguoti", "Edit", new { cipsas = item.cipsas }, new { @class = "btn btn-primary action" })
+                @Html.ActionLink("Šalinti", "Delete", new { cipsas = item.cipsas }, new { @class = "btn btn-danger action" })
+            </td>
+        </tr>
+        }
+    </tbody>
+
+</table>

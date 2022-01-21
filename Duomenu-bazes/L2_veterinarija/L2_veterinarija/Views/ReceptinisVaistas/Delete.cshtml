@@ -1,0 +1,90 @@
+﻿@model L2_veterinarija.ViewModels.ReceptinisVaistasEditViewModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Receptinio vaisto šalinimas</h2>
+
+<h3>Ar tikrai norite pašalinti šį receptinį vaistą?</h3>
+<div>
+    <h4>Receptinio vaisto šalinimas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.kodas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kodas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rvizitas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rvizitas)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.pavadinimasis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pavadinimasis)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.paskirtis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.paskirtis)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.kaina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kaina)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.galiojimopabaiga)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.galiojimopabaiga)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.kiekis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kiekis)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.doze)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.doze)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            @if (ViewBag.naudojama != null)
+            {
+                <h5>ViewBag.naudojama</h5>
+            }
+            else
+            {
+                <input type="submit" value="Šalinti" class="btn btn-danger" />
+            }
+            @Html.ActionLink("Atgal į sąrašą", "Index", "Modelis", new { @class = "btn btn-default" })
+        </div>
+    }
+</div>

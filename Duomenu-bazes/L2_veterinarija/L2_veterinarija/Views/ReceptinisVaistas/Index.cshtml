@@ -1,0 +1,79 @@
+﻿@model IEnumerable<L2_veterinarija.ViewModels.ReceptinisVaistasViewModel>
+
+@{
+    ViewBag.Title = "Vaistai";
+}
+
+<h2>Receptiniai vaistai</h2>
+
+<p>
+    @Html.ActionLink("Naujas receptinis vaistas", "Create", "ReceptinisVaistas", new { @class = "btn btn-success" })
+</p>
+<table class="table table-striped datatable">
+
+    <thead>
+        <tr style="background-color: lightblue">
+            <th>
+                @Html.DisplayNameFor(model => model.kodas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pavadinimasis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.paskirtis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.kaina)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.galiojimopabaiga)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.kiekis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.doze)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rvizitas)
+            </th>
+            <th style="width: 18%"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.kodas)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.pavadinimasis)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.paskirtis)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.kaina)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.galiojimopabaiga)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.kiekis)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.doze)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.rvizitas)
+                </td>
+                <td>
+                    @Html.ActionLink("Redaguoti", "Edit", new { kodas = item.kodas }, new { @class = "btn btn-primary action" })
+                    @Html.ActionLink("Šalinti", "Delete", new { kodas = item.kodas }, new { @class = "btn btn-danger action" })
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

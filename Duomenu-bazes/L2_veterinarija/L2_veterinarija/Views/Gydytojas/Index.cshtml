@@ -1,0 +1,78 @@
+﻿@model IEnumerable<L2_veterinarija.ViewModels.GydytojasViewModel>
+
+@{
+    ViewBag.Title = "Gydytojai";
+}
+
+<h2>Gydytojai</h2>
+
+<p>
+    @Html.ActionLink("Naujas gydytojas", "Create", "Gydytojas", new { @class = "btn btn-success" })
+</p>
+<table class="table table-striped datatable">
+    <thead>
+        <tr style="background-color: lightblue">
+            <th>
+                @Html.DisplayNameFor(model => model.darbuotojokodas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.vardas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pavarde)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.telefonas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.epastas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.stazas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.kabinetas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.klinika)
+            </th>
+            <th style="width: 18%"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.darbuotojokodas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.vardas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pavarde)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.telefonas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.epastas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.stazas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.kabinetas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.klinika)
+            </td>
+            <td>
+                @Html.ActionLink("Redaguoti", "Edit", new { kodas = item.darbuotojokodas }, new { @class = "btn btn-primary action" })
+                @Html.ActionLink("Šalinti", "Delete", new { kodas = item.darbuotojokodas }, new { @class = "btn btn-danger action" })
+            </td>
+        </tr>
+        }
+    </tbody>
+
+</table>

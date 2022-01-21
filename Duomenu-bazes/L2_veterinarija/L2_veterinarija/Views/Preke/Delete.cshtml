@@ -1,0 +1,61 @@
+﻿@model L2_veterinarija.Models.Preke
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Prekės šalinimas</h2>
+
+<h3>Ar tikrai norite pašalinti prekę?</h3>
+<div>
+    <h4>Prekė</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.kodas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kodas)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.pavadinimas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pavadinimas)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.kaina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kaina)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.informacija)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.informacija)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            @if (ViewBag.naudojama != null)
+            {
+                <h5 style="color:red">@ViewBag.naudojama</h5>
+            }
+            else
+            {
+                <input type="submit" value="Šalinti" class="btn btn-danger" />
+            }
+            @Html.ActionLink("Atgal į sąrašą", "Index", "Prekes", new { @class = "btn btn-default" })
+        </div>
+    }
+</div>

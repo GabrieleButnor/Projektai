@@ -1,0 +1,55 @@
+﻿@model IEnumerable<L2_veterinarija.Models.Preke>
+
+@{
+    ViewBag.Title = "Prekės";
+}
+
+<h2>Prekės</h2>
+
+<p>
+    @Html.ActionLink("Nauja prekė", "Create", "Preke", new { @class = "btn btn-success" })
+</p>
+<table class="table table-striped datatable">
+    <thead>
+        <tr style="background-color: lightblue">
+            <th>
+                @Html.DisplayNameFor(model => model.kodas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pavadinimas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.kaina)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.informacija)
+            </th>
+            <th style="width: 18%"></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.kodas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pavadinimas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.kaina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.informacija)
+            </td>
+            <td>
+                @Html.ActionLink("Redaguoti", "Edit", new { kodas = item.kodas }, new { @class = "btn btn-primary action" })
+                @Html.ActionLink("Šalinti", "Delete", new { kodas = item.kodas }, new { @class = "btn btn-danger action" })
+            </td>
+        </tr>
+        }
+    </tbody>
+
+</table>

@@ -1,0 +1,130 @@
+﻿@model L2_veterinarija.ViewModels.MiestasEditViewModel
+
+@{
+    ViewBag.Title = "Naujas miestas";
+    var k_count = 0;
+}
+
+<h2>Naujas miestas</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Naujas miestas</h4>
+        <hr />
+        <fieldset>
+            <legend>Miesto informacija</legend>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.miestas.id, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.miestas.id, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.miestas.id, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.miestas.salis, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.miestas.salis, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.miestas.salis, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.miestas.apskritiespavadinimas, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.miestas.apskritiespavadinimas, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.miestas.apskritiespavadinimas, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.miestas.pavadinimas, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.miestas.pavadinimas, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.miestas.pavadinimas, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+        </fieldset>
+        <fieldset>
+            <legend>Klinikos</legend>
+            <table class="table-responsive" id="klinikos_tbl">
+                <thead>
+                    <tr>
+                        <th>Imonės kodas</th>
+                        <th>Pavadinimas</th>
+                        <th>Adresas</th>
+                        <th>Telefonas</th>
+                        <th>Elektronis paštas</th>
+                        <th>Darbuotojų skaičius</th>
+                    </tr>
+                </thead>
+
+            </table>
+            <input type="hidden" disabled value="0" id="hCount" />
+            <button id="prd" type="button" class="btn btn-info" onClick="prideti($('#hCount').val());"><i class="glyphicon-plus-sign"></i> Pridėti</button>
+
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <input type="submit" value="Išsaugoti" style="margin-top: 5px;" class="btn btn-success" />
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+}
+
+<div>
+    @Html.ActionLink("Atgal į sąrašą »", "Index", "Miestas", new { @class = "btn btn-default" })
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        function prideti(sk) {
+            var tmp_row = `"<tr>
+                        <td>
+                            <input data-val="true" data-val-number="The field fk_miestas must be a number." data-val-required="The fk_miestas field is required." id="klinikos_`+ sk + `__fk_miestas" name="klinikos[` + sk + `].fk_miestas" type="hidden" value="0">
+                            <input data-val="true" data-val-number="The field kiekis must be a number." data-val-required="The kiekis field is required." id="paslaugosKainos_`+ sk + `__kiekis" name="paslaugosKainos[` + sk + `].kiekis" type="hidden" value="">
+
+                            <input data-val="true" data-val-number="The field imoneskodas must be a number." data-val-required="The imoneskodas field is required." id="klinikos_`+ sk + `__imoneskodas" name="klinikos[` + sk + `].imoneskodas" type="text" value="">
+                            <td><input data-val="true" data-val-required="The pavadinimas field is required." id="klinikos_`+ sk + `__pavadinimas" name="klinikos[` + sk + `].pavadinimas" type="text" value=""></td>
+                            <td><input data-val="true" data-val-required="The adresas field is required." id="klinikos_`+ sk + `__adresas" name="klinikos[` + sk + `].adresas" type="text" value=""></td>
+                            <td><input data-val="true" data-val-required="The telefonas field is required." id="klinikos_`+ sk + `__telefonas" name="klinikos[` + sk + `].telefonas" type="text" value=""></td>
+                            <td><input data-val="true" data-val-required="The epastas field is required." id="klinikos_`+ sk + `__epastas" name="klinikos[` + sk + `].epastas" type="text" value=""></td>
+                            <td><input data-val="true" data-val-number="The field darbuotojusk must be a number." data-val-required="The darbuotojusk field is required." id="klinikos_`+ sk + `__darbuotojusk" name="klinikos[` + sk + `].darbuotojusk" type="text" value=""></td>
+        
+                        </td>                     
+                        <td><button type="button" class="btn btn-danger" onclick="salinti(this)"><i class="glyphicon-remove"></i> Šalinti</button></td>
+                    </tr>"`;
+
+            $("#klinikos_tbl tr:last").after(tmp_row);
+
+            $('#hCount').val(Number($('#hCount').val()) + 1);
+
+        };
+
+        function salinti(btn) {
+            $(btn).closest('tr').remove();
+
+
+            var cnt = 0;
+
+            $("#klinikos_tbl tbody tr").each(function () {
+                var tmp_row = "<tr>" + $(this).html() + "</tr>";
+                var new_tmp_row = tmp_row.replace(/\[(.)\]/g, "[" + cnt + "]");
+                new_tmp_row = new_tmp_row.replace(/\_(.)\_/g, "_" + cnt + "_");
+
+                $(this).replaceWith(new_tmp_row);
+                cnt = cnt + 1;
+            });
+
+            $('#hCount').val(cnt);
+
+        }
+    </script>
+}

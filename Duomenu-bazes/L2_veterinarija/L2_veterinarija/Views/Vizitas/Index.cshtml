@@ -1,0 +1,60 @@
+﻿@model IEnumerable<L2_veterinarija.ViewModels.VizitasListViewModel>
+
+    @{
+        ViewBag.Title = "Vizitai";
+    }
+
+    <h2>Vizitai</h2>
+
+    <p>
+        @Html.ActionLink("Nauja vizitas", "Create", "Vizitas", new { @class = "btn btn-success" })
+    </p>
+    <table class="table table-striped datatable">
+        <thead>
+            <tr style="background-color: lightblue">
+                <th>
+                    @Html.DisplayNameFor(model => model.numeris)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.sudarymodata)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.gydytojas)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.gyvunas)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.busena)
+                </th>
+                <th style="width: 18%"></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.numeris)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.sudarymodata)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.gydytojas)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.gyvunas)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.busena)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Redaguoti", "Edit", new { numeris = item.numeris }, new { @class = "btn btn-primary action" })
+                        @Html.ActionLink("Šalinti", "Delete", new { numeris = item.numeris }, new { @class = "btn btn-danger action" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>

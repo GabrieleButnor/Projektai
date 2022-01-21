@@ -1,0 +1,67 @@
+﻿@model L2_veterinarija.ViewModels.MiestasEditViewModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Miesto šalinimas</h2>
+
+<h3>Ar tikrai norite ištrinti miestą?</h3>
+<div>
+    <h4>Miesto šalinimas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.miestas.id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.miestas.id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.miestas.salis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.miestas.salis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.miestas.apskritiespavadinimas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.miestas.apskritiespavadinimas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.miestas.pavadinimas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.miestas.pavadinimas)
+        </dd>
+
+    </dl>
+
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.miestas.id)
+
+        <div class="form-actions no-color">
+            @if (ViewBag.naudojama != null)
+            {
+                <h5 style="color:red">@ViewBag.naudojama</h5>
+            }
+            else
+            {
+                <input type="submit" value="Delete" class="btn btn-danger" />
+            }
+            @Html.ActionLink("Atgal į sąrašą", "Index", "Miestas", new { @class = "btn btn-default" })
+        </div>
+    }
+</div>

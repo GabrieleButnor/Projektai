@@ -1,0 +1,166 @@
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\L2_veterinarija.dll.config
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\L2_veterinarija.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\L2_veterinarija.pdb
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\csc.exe
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\csc.exe.config
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\csc.rsp
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\csi.exe
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\csi.exe.config
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\csi.rsp
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\Microsoft.Managed.Core.targets
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\System.AppContext.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Collections.Immutable.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Console.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\System.IO.Compression.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\System.IO.FileSystem.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\System.IO.Pipes.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Reflection.Metadata.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Security.AccessControl.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Security.Claims.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Security.Principal.Windows.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\System.ValueTuple.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Xml.XmlDocument.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Xml.XPath.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\vbc.exe
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\vbc.exe.config
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\vbc.rsp
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\VBCSCompiler.exe
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\roslyn\VBCSCompiler.exe.config
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\Antlr3.Runtime.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\Microsoft.Web.Infrastructure.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\Newtonsoft.Json.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\System.Web.Helpers.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\System.Web.Mvc.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\System.Web.Optimization.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\System.Web.Razor.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\System.Web.WebPages.Deployment.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\System.Web.WebPages.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\System.Web.WebPages.Razor.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\WebGrease.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\System.Web.Helpers.xml
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\System.Web.Mvc.xml
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\System.Web.Optimization.xml
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\System.Web.Razor.xml
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\System.Web.WebPages.xml
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\System.Web.WebPages.Deployment.xml
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\System.Web.WebPages.Razor.xml
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\Newtonsoft.Json.xml
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\Antlr3.Runtime.pdb
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\obj\Debug\L2_veterinarija.csprojAssemblyReference.cache
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\obj\Debug\L2_veterinarija.csproj.CoreCompileInputs.cache
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\obj\Debug\L2_veterinarija.csproj.CopyComplete
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\obj\Debug\L2_veterinarija.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\obj\Debug\L2_veterinarija.pdb
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\BouncyCastle.Crypto.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\Google.Protobuf.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\Renci.SshNet.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\Google.Protobuf.xml
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\Renci.SshNet.xml
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\MySql.Data.dll
+C:\GG\A KTU\4 semestras\Duomenu bazes\L2\L2_veterinarija\L2_veterinarija\bin\MySql.Data.xml
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\L2_veterinarija.dll.config
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\L2_veterinarija.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\L2_veterinarija.pdb
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\csc.exe
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\csc.exe.config
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\csc.rsp
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\csi.exe
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\csi.exe.config
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\csi.rsp
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\Microsoft.Managed.Core.targets
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\System.AppContext.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Collections.Immutable.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Console.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\System.IO.Compression.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\System.IO.FileSystem.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\System.IO.Pipes.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Reflection.Metadata.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Security.AccessControl.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Security.Claims.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Security.Principal.Windows.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\System.ValueTuple.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Xml.XmlDocument.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Xml.XPath.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\vbc.exe
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\vbc.exe.config
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\vbc.rsp
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\VBCSCompiler.exe
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\roslyn\VBCSCompiler.exe.config
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\Antlr3.Runtime.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\BouncyCastle.Crypto.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\Google.Protobuf.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\Microsoft.Web.Infrastructure.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\MySql.Data.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\Newtonsoft.Json.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\Renci.SshNet.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\System.Web.Helpers.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\System.Web.Mvc.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\System.Web.Optimization.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\System.Web.Razor.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\System.Web.WebPages.Deployment.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\System.Web.WebPages.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\System.Web.WebPages.Razor.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\WebGrease.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\Google.Protobuf.xml
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\MySql.Data.xml
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\Renci.SshNet.xml
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\System.Web.Helpers.xml
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\System.Web.Mvc.xml
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\System.Web.Optimization.xml
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\System.Web.Razor.xml
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\System.Web.WebPages.xml
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\System.Web.WebPages.Deployment.xml
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\System.Web.WebPages.Razor.xml
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\Newtonsoft.Json.xml
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\Antlr3.Runtime.pdb
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\obj\Debug\L2_veterinarija.csprojAssemblyReference.cache
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\obj\Debug\L2_veterinarija.csproj.CoreCompileInputs.cache
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\obj\Debug\L2_veterinarija.csproj.CopyComplete
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\obj\Debug\L2_veterinarija.dll
+D:\KTU\Projektai\Projektai\Duomenu-bazes\L2_veterinarija\L2_veterinarija\obj\Debug\L2_veterinarija.pdb
