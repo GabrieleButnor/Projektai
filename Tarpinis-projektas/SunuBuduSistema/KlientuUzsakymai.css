@@ -1,0 +1,24 @@
+﻿body {
+    margin: 0;
+    align-items: center;
+    background-image: url('Images/background5.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.mainBox {
+    margin-left: 150px;
+    margin-top: 100px;
+}
+.aa {
+    position: center;
+    text-align-last: center;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 100px;
+    background-color: rgba(0,0,0,.7);
+    box-shadow: 10px 0px 20px 10px #000000;
+}

@@ -1,0 +1,21 @@
+﻿body {
+    margin: 0;
+    align-items: center;
+    background-image: url('Images/background5.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.mainBox {
+    position: center;
+    text-align-last: center;
+    padding-top: 20px;
+    /*padding-left: 20px;
+    padding-right: 20px;*/
+    padding-bottom: 20px;
+    margin-top: 40px;
+    background-color: rgba(0,0,0,.7);
+    box-shadow: 10px 0px 20px 10px #000000;
+}

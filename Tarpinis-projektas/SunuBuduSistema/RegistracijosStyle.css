@@ -1,0 +1,34 @@
+﻿body {
+    margin: 0;
+    align-items: center;
+    background-image: url('Images/background5.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.login {
+    margin-top: 100px;
+    margin-left: 200px;
+    align-items: center;
+    height: 800px;
+    width: 800px;
+    background-color: rgba(0,0,0,.7);
+    padding-top: 20px;
+    padding-left: 100px;
+    padding-bottom: 20px;
+    box-shadow: 10px 0px 20px 10px #000000;
+    border-radius: 25px;
+}
+
+input {
+    border: none;
+    border-bottom: 2px solid cadetblue;
+    background-color: rgba(0,0,0,.0);
+    border-radius: 10px;
+}
+
+.color {
+    background: linear-gradient(to top, Turquoise 0%, white 100%);
+}
