@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "dgSpecHash": "ppZUdD0J65B5GmE15moglsstHW7Mk32Y60/anENvCgrnRBnJQibvZsUKYx7K5p3IQnPamVs/Lx89ndfUURmWRQ==",
+  "success": true,
+  "projectFilePath": "D:\\KTU\\obj\\design_patters\\DesignPatternsClientSide\\DesignPatternsClientSide.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\37061\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\5.0.11\\microsoft.aspnetcore.connections.abstractions.5.0.11.nupkg.sha512",
+    "C:\\Users\\37061\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.11\\microsoft.aspnetcore.http.features.5.0.11.nupkg.sha512",
+    "C:\\Users\\37061\\.nuget\\packages\\microsoft.aspnetcore.signalr.client.core\\5.0.10\\microsoft.aspnetcore.signalr.client.core.5.0.10.nupkg.sha512",
+    "C:\\Users\\37061\\.nuget\\packages\\microsoft.aspnetcore.signalr.common\\5.0.10\\microsoft.aspnetcore.signalr.common.5.0.10.nupkg.sha512",
+    "C:\\Users\\37061\\.nuget\\packages\\microsoft.aspnetcore.signalr.protocols.json\\5.0.10\\microsoft.aspnetcore.signalr.protocols.json.5.0.10.nupkg.sha512",
+    "C:\\Users\\37061\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.2\\microsoft.extensions.dependencyinjection.5.0.2.nupkg.sha512",
+    "C:\\Users\\37061\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\37061\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
+    "C:\\Users\\37061\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\37061\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
+    "C:\\Users\\37061\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\37061\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\37061\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0\\system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512",
+    "C:\\Users\\37061\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
+    "C:\\Users\\37061\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+    "C:\\Users\\37061\\.nuget\\packages\\system.text.encodings.web\\5.0.1\\system.text.encodings.web.5.0.1.nupkg.sha512",
+    "C:\\Users\\37061\\.nuget\\packages\\system.text.json\\5.0.2\\system.text.json.5.0.2.nupkg.sha512",
+    "C:\\Users\\37061\\.nuget\\packages\\system.threading.channels\\5.0.0\\system.threading.channels.5.0.0.nupkg.sha512",
+    "C:\\Users\\37061\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
+  ],
+  "logs": []
+}

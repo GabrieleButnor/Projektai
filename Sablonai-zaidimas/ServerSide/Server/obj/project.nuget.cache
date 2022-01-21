@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "p40UAZ2/Afw37Z6ie84ob2+S7yOQOleED4J/+uSHBzb7VOM0fO4JKr9fz8BW6Ph5/iZSN4y67NCGbkAG3IRdag==",
+  "success": true,
+  "projectFilePath": "D:\\KTU\\obj\\design_patters\\ServerSide\\Server\\Server.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\37061\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
